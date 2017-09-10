@@ -1,24 +1,22 @@
 ---
 layout: default
+title: "404"
+excerpt: 链接过时了？搜索一下！
+bannerTransparent: true
 ---
 
-<style type="text/css" media="screen">
-  .container {
-    margin: 10px auto;
-    max-width: 600px;
-    text-align: center;
-  }
-  h1 {
-    margin: 30px 0;
-    font-size: 4em;
-    line-height: 1;
-    letter-spacing: -1px;
-  }
-</style>
+<div class="module-404">
+  <div class="center">
+    <header>404</header>
 
-<div class="container">
-  <h1>404</h1>
+    <p class="lead">{{page.excerpt}}<p>
 
-  <p><strong>Page not found :(</strong></p>
-  <p>The requested page could not be found.</p>
+    <form action="http://google.com/search" method="get">
+      <input type="hidden" name="q" value="site:harttle.com">
+      <input class="form-control" placeholder="关键字..." name="q" autofocus>
+    </form>
+  
+  </div>
 </div>
+
+

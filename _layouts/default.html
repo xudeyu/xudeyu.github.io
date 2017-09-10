@@ -1,20 +1,29 @@
 <!DOCTYPE html>
-<html lang="{{ page.lang | default: site.lang | default: "en" }}">
+<html class="module-default {%if page.fullSize %}full-size{%endif%}">
+  <head> {% include head.html %} </head>
+  <body id="body" >
 
-  {% include head.html %}
-
-  <body>
-
-    {% include header.html %}
-
-    <main class="page-content" aria-label="Content">
-      <div class="wrapper">
-        {{ content }}
+    <div class="banner {% if page.bannerTransparent %}transparent{% endif %}">
+      <div class="container-fluid">
+        <nav class="pull-right">
+          <a class="glow no-decoration" href="/tags.html">标签</a>
+          <a class="glow no-decoration" href="/archive.html">归档</a>
+          <a class="glow no-decoration" href="/about.html">关于</a>
+        </nav>
+        <a class="logo no-decoration" href="/">
+          <span class="logo-land"><font color="red"><b>D</b></font>EYU's YARD</span>
+        </a>
       </div>
-    </main>
+    </div>
+
+    <div class="site-content"> {{ content }} </div>
+
+    <a href="#body" id="site-scroll-top" class="animate">
+      <span class="fa fa-chevron-up"></span>
+    </a>
 
     {% include footer.html %}
+    <script src="/assets/js/scrolltop.js"></script>
 
   </body>
-
 </html>
