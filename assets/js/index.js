@@ -23,7 +23,7 @@ document.addEventListener('DOMContentLoaded', function () {
       return rhs.count - lhs.count
     })
     .filter(function (tag) {
-      return tag.count > 1
+      return tag.count > 0 
     })
     .map(function (tag) {
       return $('<a>', {
