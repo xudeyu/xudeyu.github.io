@@ -13,7 +13,7 @@ task :new do
     puts "请输入 post 分类，以空格分隔："
     @categories = STDIN.gets.chomp
     puts "请输入 post 标签："
-    @tag = STDIN.gets.chomp
+    @tags = STDIN.gets.chomp
     @slug = "#{@url}"
     @slug = @slug.downcase.strip.gsub(' ', '-')
     @date = Time.now.strftime("%F")
@@ -30,7 +30,7 @@ task :new do
             file.puts "date: #{Time.now}"
             file.puts "author: Deyu"
             file.puts "categories: #{@categories}"
-            file.puts "tag: #{@tag}"
+            file.puts "tags: #{@tags}"
             file.puts "---"
             file.puts ""
             file.puts ""
