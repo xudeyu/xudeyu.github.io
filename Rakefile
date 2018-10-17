@@ -4,7 +4,7 @@ require 'fileutils'
 
 desc "创建新 post"
 task :new do
-  puts "请输入要创建的 post URL："
+    puts "请输入要创建的 post URL："
     @url = STDIN.gets.chomp
     puts "请输入 post 标题："
     @name = STDIN.gets.chomp
@@ -27,11 +27,18 @@ task :new do
 #            file.puts "layout: post"
             file.puts "title: #{@name}"
 #            file.puts "subtitle: #{@subtitle}"
-            file.puts "author: Deyu"
             file.puts "date: #{Time.now}"
+            file.puts "author: Deyu"
             file.puts "categories: #{@categories}"
             file.puts "tag: #{@tag}"
             file.puts "---"
+            file.puts ""
+            file.puts ""
+            file.puts ""
+            file.puts ""
+            file.puts ""
+            file.puts "&nbsp;"
+            file.puts "&nbsp;"
     end
     exec "vim #{@post_name}"
 end
