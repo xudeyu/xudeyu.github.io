@@ -1,10 +1,9 @@
 ---
 title: Docker Getting Started
-subtitle: Docker 入门
-author: Deyu
 date: 2018-10-09 18:27:15 +0800
-categories: 入门系列 
-tag: docker
+author: Deyu
+categories: 入门系列
+tags: docker 入门系列 
 ---
 
 &nbsp;
@@ -195,9 +194,5 @@ docker container logs命令用来查看 docker 容器的输出，即容器里面
 [ref4]: http://www.ruanyifeng.com/blog/2018/02/docker-tutorial.html "阮一峰博客介绍 Docker"
 
 
-
-
-
-
-
-
+&nbsp;
+&nbsp;
