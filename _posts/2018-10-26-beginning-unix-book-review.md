@@ -3,7 +3,7 @@ title: 《Beginning Unix》读后感
 date: 2018-10-26 18:55:41 +0800
 author: Deyu
 categories: 读后感
-tags: 读后感 操作系统 Unix
+tags: 读后感 操作系统 unix
 ---
 
 ![Beginning Unix.jpg](/assets/img/blog/2018-10-26-beginning-unix-book-cover.jpg)

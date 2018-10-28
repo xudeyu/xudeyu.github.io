@@ -3,7 +3,7 @@ title: 《C Primer Plus》读后感
 date: 2018-10-27 10:18:57 +0800
 author: Deyu
 categories: 读后感
-tags: 读后感 编程语言 C
+tags: 读后感 编程语言 c
 ---
 
 ![C Primer Plus](/assets/img/blog/2018-10-27-c-primer-plus-book-cover.jpeg)
