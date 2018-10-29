@@ -12,6 +12,8 @@ tags: docker 入门系列
 -------
 Docker 是什么上网搜一下就知道了，我只说说自己的体会。Docker 利用 Linux Kernel 提供的 cgroups, namespaces 等技术，构建类似沙盒的环境。在沙盒里你怎么搞破坏都没事，从而达到了与主机环境隔离的作用。也因为 Docker 采用的技术和虚拟机不同，它更轻量、更高效。
 
+<!--more-->
+
 最初，Docker 主要用于 Linux。在 Windows 和 Mac OS 上使用 Docker 需要安装 Linux 虚拟机（用来运行 Linux containers）。但是到 2016 年， Windows 声明通过 Hyper-V 技术，Docker 可以 natively 了。Windows 上既可以运行 Linux container，也可以运行 Windows container 了。**技术在进步，不过，目前在 Linux 上运行 windows containers 或者在 Mac OS 运行 Linux 和 Windows containers 仍然是需要虚拟机？**
 
 &nbsp;
