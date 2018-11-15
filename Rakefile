@@ -35,6 +35,7 @@ task :new do
             file.puts ""
             file.puts ""
             file.puts ""
+            file.puts "<!--more-->"
             file.puts ""
             file.puts ""
             file.puts "&nbsp;"
