@@ -12,7 +12,7 @@ tags: 图像和视觉
 
 <!--more-->
 
-![边缘的类型](https://img-blog.csdnimg.cn/20190211205937317.png)
+![边缘的类型](/assets/img/blog/2019-04-01-edge-detection-1.png)
 
 边缘通常比图像中的其他特征（颜色，纹理）包含更多的有用信息，因此边缘检测一直是很重要的课题。尤其是如何把边缘同其他特征（纹理，噪声）区分开来，是很关键的。对于图像中对象的识别和定位，边缘检测是一个基本的工具。它也是图像分割过程的一部分。
 
@@ -30,9 +30,9 @@ tags: 图像和视觉
 
 一阶微分算子一般是通过梯度来进行边缘检测，下图就是利用梯度（一阶导数）检测的例子：
 
-![阶跃式边缘和梯度的对应变化](https://img-blog.csdnimg.cn/20190211212148607.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3dlaXhpbl80MzE2Mjc0NQ==,size_16,color_FFFFFF,t_70)
+![阶跃式边缘和梯度的对应变化](/assets/img/blog/2019-04-01-edge-detection-2.png)
 
-![屋顶式边缘和梯度的对应变化](https://img-blog.csdnimg.cn/20190211212255562.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3dlaXhpbl80MzE2Mjc0NQ==,size_16,color_FFFFFF,t_70) 
+![屋顶式边缘和梯度的对应变化](/assets/img/blog/2019-04-01-edge-detection-3.png)
 
 这类算子包括：Roberts 算子，Prewitt 算子，Sobel 算子，Kirsch 算子等。
 
@@ -40,7 +40,7 @@ tags: 图像和视觉
 
 二阶微分的特性是，在导数的极值点为零，极值点两侧为异号。由于其对细微的边缘也能很好的响应，所以应用广泛。但其缺点也很明显，就是对噪声的响应也会很强烈。
 
-![一阶导数和二阶导数](https://img-blog.csdnimg.cn/20190213105926535.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3dlaXhpbl80MzE2Mjc0NQ==,size_16,color_FFFFFF,t_70)
+![一阶导数和二阶导数](/assets/img/blog/2019-04-01-edge-detection-4.png)
 
 这类算法包括：Laplacian 算子，LoG 算子，Canny 算子等。
 
