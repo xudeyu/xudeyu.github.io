@@ -1,38 +1,38 @@
 ---
-title: Vim ²å¼şÖ® coc-nvim
+title: Vim æ’ä»¶ä¹‹ coc-nvim
 date: 2021-07-11 09:01:00 +0800
 author: Deyu
-categories: ¿ª·¢»·¾³¼°¹¤¾ß
-tags: vim ¹¤¾ß
+categories: å¼€å‘ç¯å¢ƒåŠå·¥å…·
+tags: vim å·¥å…·
 ---
 
-#### Ê²Ã´ÊÇ coc-nvim
+#### ä»€ä¹ˆæ˜¯ coc-nvim
 
-coc-nvim ÊÇÒ»¿îÖ§³Ö LSP µÄ²å¼ş£¬Õâ¸ö²å¼şÊ¹ vim ¾ß±¸ÁË´úÂë²¹È«£¬Óï·¨¼ì²é£¬±êÇ©Ìø×ªµÈ¹¦ÄÜ¡£
+coc-nvim æ˜¯ä¸€æ¬¾æ”¯æŒ LSP çš„æ’ä»¶ï¼Œè¿™ä¸ªæ’ä»¶ä½¿ vim å…·å¤‡äº†ä»£ç è¡¥å…¨ï¼Œè¯­æ³•æ£€æŸ¥ï¼Œæ ‡ç­¾è·³è½¬ç­‰åŠŸèƒ½ã€‚
 
-#### Ê²Ã´ÊÇ LSP
+#### ä»€ä¹ˆæ˜¯ LSP
 
 The Language Server Protocol (LSP) defines the protocol used between an editor or IDE and a language server that provides language features like auto complete, go to definition, find all references etc.
 
-Ê×ÏÈ LSP ÊÇÒ»ÖÖĞ­Òé£¬¶¨ÒåÁË±à¼­Æ÷ºÍÓïÑÔ·şÎñÆ÷µÄ½»»¥¡£¶øÓïÑÔ·şÎñÆ÷¿ÉÒÔÍ¨¹ıÕâÖÖ½»»¥Îª±à¼­Æ÷Ìá¹©¶ÔÓ¦ÓïÑÔµÄ¹¦ÄÜ£¬ÖîÈç£º×Ô¶¯²¹È«£¬Ìø×ªµ½¶¨Òå£¬ÕÒµ½ÒıÓÃÎ»ÖÃµÈµÈ¡£
+é¦–å…ˆ LSP æ˜¯ä¸€ç§åè®®ï¼Œå®šä¹‰äº†ç¼–è¾‘å™¨å’Œè¯­è¨€æœåŠ¡å™¨çš„äº¤äº’ã€‚è€Œè¯­è¨€æœåŠ¡å™¨å¯ä»¥é€šè¿‡è¿™ç§äº¤äº’ä¸ºç¼–è¾‘å™¨æä¾›å¯¹åº”è¯­è¨€çš„åŠŸèƒ½ï¼Œè¯¸å¦‚ï¼šè‡ªåŠ¨è¡¥å…¨ï¼Œè·³è½¬åˆ°å®šä¹‰ï¼Œæ‰¾åˆ°å¼•ç”¨ä½ç½®ç­‰ç­‰ã€‚
 
 <!--more-->
 
-LSP ½â¾öÁËÊ²Ã´ÎÊÌâÄØ£¿Õı³£À´Ëµ£¬Èç¹ûÓĞ N ÖÖÓïÑÔ£¬M ÖÖ±à¼­Æ÷£¬¾Í»á´æÔÚÖÁÉÙ NxM ¸öµÄ²å¼ş»òÕß³ÌĞò£¬ÓÃÒÔÖ§³ÖÌØ¶¨ÓïÑÔÔÚÌØ¶¨±à¼­Æ÷ÏÂµÄÒ»Ğ©¹¦ÄÜ£¬ËûÃÇºÜ¿ÉÄÜÊÇ»¥²»¼æÈİµÄ¡£
+LSP è§£å†³äº†ä»€ä¹ˆé—®é¢˜å‘¢ï¼Ÿæ­£å¸¸æ¥è¯´ï¼Œå¦‚æœæœ‰ N ç§è¯­è¨€ï¼ŒM ç§ç¼–è¾‘å™¨ï¼Œå°±ä¼šå­˜åœ¨è‡³å°‘ NxM ä¸ªçš„æ’ä»¶æˆ–è€…ç¨‹åºï¼Œç”¨ä»¥æ”¯æŒç‰¹å®šè¯­è¨€åœ¨ç‰¹å®šç¼–è¾‘å™¨ä¸‹çš„ä¸€äº›åŠŸèƒ½ï¼Œä»–ä»¬å¾ˆå¯èƒ½æ˜¯äº’ä¸å…¼å®¹çš„ã€‚
 
-Èç¹û±à¼­Æ÷ºÍÓïÑÔÄ£ĞÍ³ÌĞò£¨Ò²¾ÍÊÇÓïÑÔ·şÎñÆ÷£©Í¨¹ıÒ»¸ö±ê×¼µÄ protocol ½øĞĞ½»»¥£¬ÄÇÃ´±à¼­Æ÷½«ÎŞĞè¹Ø×¢ÓïÑÔÌØĞÔ£¬ÓïÑÔ·şÎñÆ÷Ò²ÎŞĞè¹Ø×¢±à¼­Æ÷ÌØĞÔ£¬¸÷Ë¾ÆäÖ°¡£×î¶àÖ»ĞèÒª M + N ÖÖ×éºÏ´æÔÚ¾Í×ãÒÔÂú×ãÈÎÒâµÄĞèÇó³¡¾°¡£Õâ¸ö protocol ¾ÍÊÇ LSP.
+å¦‚æœç¼–è¾‘å™¨å’Œè¯­è¨€æ¨¡å‹ç¨‹åºï¼ˆä¹Ÿå°±æ˜¯è¯­è¨€æœåŠ¡å™¨ï¼‰é€šè¿‡ä¸€ä¸ªæ ‡å‡†çš„ protocol è¿›è¡Œäº¤äº’ï¼Œé‚£ä¹ˆç¼–è¾‘å™¨å°†æ— éœ€å…³æ³¨è¯­è¨€ç‰¹æ€§ï¼Œè¯­è¨€æœåŠ¡å™¨ä¹Ÿæ— éœ€å…³æ³¨ç¼–è¾‘å™¨ç‰¹æ€§ï¼Œå„å¸å…¶èŒã€‚æœ€å¤šåªéœ€è¦ M + N ç§ç»„åˆå­˜åœ¨å°±è¶³ä»¥æ»¡è¶³ä»»æ„çš„éœ€æ±‚åœºæ™¯ã€‚è¿™ä¸ª protocol å°±æ˜¯ LSP.
 
 - [Language Server Protocol](https://docs.microsoft.com/en-us/visualstudio/extensibility/language-server-protocol?view=vs-2019)
-- [LSP + Swift ÓĞÒ»Ğ©Ô­ÀíĞÔ½éÉÜ](https://blog.csdn.net/weixin_33727510/article/details/87960563)
-- [LSP Ö§³ÖÁĞ±í]£¨https://blog.csdn.net/u012930117/article/details/79291677£©
+- [LSP + Swift æœ‰ä¸€äº›åŸç†æ€§ä»‹ç»](https://blog.csdn.net/weixin_33727510/article/details/87960563)
+- [LSP æ”¯æŒåˆ—è¡¨]ï¼ˆhttps://blog.csdn.net/u012930117/article/details/79291677ï¼‰
 
 
 
-#### ÈçºÎ°²×° coc-nvim
+#### å¦‚ä½•å®‰è£… coc-nvim
 
-ÓÉÓÚ¹úÄÚÍøÂçÔ­Òò£¬°²×° coc-nvim »¹ÊÇÓĞÒ»µã¿²¿ÀµÄ£¬Ï£Íû´ó¼Ò¶àÒ»µãÄÍĞÄÁË¡£
+ç”±äºå›½å†…ç½‘ç»œåŸå› ï¼Œå®‰è£… coc-nvim è¿˜æ˜¯æœ‰ä¸€ç‚¹åå·çš„ï¼Œå¸Œæœ›å¤§å®¶å¤šä¸€ç‚¹è€å¿ƒäº†ã€‚
 
-1 Ê×ÏÈ¿ÉÒÔ°²×°Ò»ÏÂ [vim-plug](https://github.com/junegunn/vim-plug) , ÕâÊÇÒ»¸ö¹ÜÀí²å¼şµÄ¹¤¾ß£¬ÀàËÆÓÚ vundle£¬Ö§³ÖÒì²½µÄÏÂÔØ°²×°£¬ËÙ¶È¸ü¿ì¡£Èç¹ûÒÑ¾­°²×°ÁË vundle Ò²ÊÇ¿ÉÒÔµÄ
+1 é¦–å…ˆå¯ä»¥å®‰è£…ä¸€ä¸‹ [vim-plug](https://github.com/junegunn/vim-plug) , è¿™æ˜¯ä¸€ä¸ªç®¡ç†æ’ä»¶çš„å·¥å…·ï¼Œç±»ä¼¼äº vundleï¼Œæ”¯æŒå¼‚æ­¥çš„ä¸‹è½½å®‰è£…ï¼Œé€Ÿåº¦æ›´å¿«ã€‚å¦‚æœå·²ç»å®‰è£…äº† vundle ä¹Ÿæ˜¯å¯ä»¥çš„
 
 ```
 curl -fLo ~/.vim/autoload/plug.vim --create-dirs \
@@ -40,9 +40,9 @@ curl -fLo ~/.vim/autoload/plug.vim --create-dirs \
 #### 199.232.28.133 raw.githubusercontent.com
 ```
 
-- ÎÊÌâ£±£ºÖ´ĞĞÉÏÃæµÄÃüÁîÎŞ·¨½âÎö raw.githubusercontent.com£¬Í¨¹ıÔÚ hosts ÎÄ¼şÖĞÔö¼Ó¶ÔÓ¦µÄ IP À´½â¾ö
+- é—®é¢˜ï¼‘ï¼šæ‰§è¡Œä¸Šé¢çš„å‘½ä»¤æ— æ³•è§£æ raw.githubusercontent.comï¼Œé€šè¿‡åœ¨ hosts æ–‡ä»¶ä¸­å¢åŠ å¯¹åº”çš„ IP æ¥è§£å†³
 
-2 È»ºóÊÇ°²×° [coc-nvim](https://github.com/neoclide/coc.nvim)¡£ÔÚ .vimrc ÖĞÅäÖÃËùĞèµÄ²å¼ş£¬°üÀ¨ coc-nvim¡£È»ºóÖ´ĞĞ :PlugInstall ¼´¿É¡£
+2 ç„¶åæ˜¯å®‰è£… [coc-nvim](https://github.com/neoclide/coc.nvim)ã€‚åœ¨ .vimrc ä¸­é…ç½®æ‰€éœ€çš„æ’ä»¶ï¼ŒåŒ…æ‹¬ coc-nvimã€‚ç„¶åæ‰§è¡Œ :PlugInstall å³å¯ã€‚
 
 ```
 #### vim-plug
@@ -54,57 +54,57 @@ call plug#end()
 #### Plugin 'neoclide/coc.nvim'
 ```
 
-- ÎÊÌâ£±£ºVim °æ±¾ĞèÒª 8.0 ÒÔÉÏ£¬²¢ÇÒÒªÖ§³Ö python
+- é—®é¢˜ï¼‘ï¼šVim ç‰ˆæœ¬éœ€è¦ 8.0 ä»¥ä¸Šï¼Œå¹¶ä¸”è¦æ”¯æŒ python
 
-  ÎÒµÄ Vim ÊÇ 7.x£¬Òò´ËÑ¡ÔñÁËÖØĞÂ±àÒë°²×°ĞÂ°æ±¾µÄ [Vim](https://github.com/vim/vim) ¡£ÕâÀïÒª×¢Òâ£¬ÖØĞÂ±àÒëÊ±Òª¿ªÆô python Ö§³Ö£º
+  æˆ‘çš„ Vim æ˜¯ 7.xï¼Œå› æ­¤é€‰æ‹©äº†é‡æ–°ç¼–è¯‘å®‰è£…æ–°ç‰ˆæœ¬çš„ [Vim](https://github.com/vim/vim) ã€‚è¿™é‡Œè¦æ³¨æ„ï¼Œé‡æ–°ç¼–è¯‘æ—¶è¦å¼€å¯ python æ”¯æŒï¼š
 
   ```
-  ## Ö»ĞèÒª¿ªÆô python2 or python3 ÆäÖĞÒ»¸ö¼´¿É
+  ## åªéœ€è¦å¼€å¯ python2 or python3 å…¶ä¸­ä¸€ä¸ªå³å¯
   ## https://stackoverflow.com/questions/23023783/vim-compiled-with-python-support-but-cant-see-sys-version
   
   ./configure --enable-pythoninterp --enable-python3interp --with-python-config-dir=/usr/lib64/python2.7/config --with-python3-config-dir=/usr/lib64/python3.3/config --with-x --with-features=huge
   
-  ## ±àÒë vim µÄÊ±ºò£¬Èç¹ûÓöµ½ Python.h: No such file or directory µÄÎÊÌâ£¬Ôò¿ÉÒÔ°²×° sudo apt-get install python-dev ½â¾ö
+  ## ç¼–è¯‘ vim çš„æ—¶å€™ï¼Œå¦‚æœé‡åˆ° Python.h: No such file or directory çš„é—®é¢˜ï¼Œåˆ™å¯ä»¥å®‰è£… sudo apt-get install python-dev è§£å†³
   ```
 
-- ÎÊÌâ 2£ºPlugInstall µÄÊ±ºòÎŞ·¨ÏÂÔØ
+- é—®é¢˜ 2ï¼šPlugInstall çš„æ—¶å€™æ— æ³•ä¸‹è½½
 
-  Í¨¹ıÌæ»» plug.vim ½Å±¾ÖĞµÄ github.com Îª fastgit.org ½â¾ö£¬[²Î¿¼´ËÌù](https://blog.csdn.net/htx1020/article/details/114364510)
+  é€šè¿‡æ›¿æ¢ plug.vim è„šæœ¬ä¸­çš„ github.com ä¸º fastgit.org è§£å†³ï¼Œ[å‚è€ƒæ­¤è´´](https://blog.csdn.net/htx1020/article/details/114364510)
 
   ```
   let fmt = get(g:, 'plug_url_format', 'https://git::@github.com/%s.git')
-  #### ¸ÄÎª ->
+  #### æ”¹ä¸º ->
   let fmt = get(g:, 'plug_url_format', 'https://git::@hub.fastgit.org/%s.git')
   
   \ '^https://git::@github\.com', 'https://github.com', '')
-  #### ¸ÄÎª ->
+  #### æ”¹ä¸º ->
   \ '^https://git::@hub.fastgit\.org', 'https://hub.fastgit.org', '')
   ```
 
-- ÎÊÌâ 3£ºĞèÒª°²×°  [nodejs](https://nodejs.org/en/download/) >= 12.12
+- é—®é¢˜ 3ï¼šéœ€è¦å®‰è£…  [nodejs](https://nodejs.org/en/download/) >= 12.12
 
   ```
   curl -sL install-node.now.sh/lts | bash
-  #### Èç¹ûÌáÊ¾È¨ÏŞÎÊÌâ£¬ĞèÒªÔÚ bash Ç°Ãæ¼Ó sudo
+  #### å¦‚æœæç¤ºæƒé™é—®é¢˜ï¼Œéœ€è¦åœ¨ bash å‰é¢åŠ  sudo
   ```
 
 
 
-3 °²×°ÓïÑÔ²å¼şºÍÓïÑÔ·şÎñÆ÷
+3 å®‰è£…è¯­è¨€æ’ä»¶å’Œè¯­è¨€æœåŠ¡å™¨
 
-coc-nvim »ù±¾ÉÏÖ»ÊÇ¿ò¼Ü£¬ĞèÒª°²×°¶ÔÓ¦ÓïÑÔµÄ [coc extension](https://github.com/neoclide/coc.nvim/wiki/Using-coc-extensions#implemented-coc-extensions) ºÍ·şÎñÆ÷²ÅÄÜÈÃ LSP ÉúĞ§¡£python µÄÍøÉÏ×ÊÁÏ±È½Ï¶à£¬ÕâÀïÒÔ c/c++ ÎªÀı¡£ [²Î¿¼Ò³Ãæ1](https://zhuanlan.zhihu.com/p/303223404)¡¡[²Î¿¼Ò³Ãæ2](https://www.jianshu.com/p/49e3ef6f25bc)
+coc-nvim åŸºæœ¬ä¸Šåªæ˜¯æ¡†æ¶ï¼Œéœ€è¦å®‰è£…å¯¹åº”è¯­è¨€çš„ [coc extension](https://github.com/neoclide/coc.nvim/wiki/Using-coc-extensions#implemented-coc-extensions) å’ŒæœåŠ¡å™¨æ‰èƒ½è®© LSP ç”Ÿæ•ˆã€‚python çš„ç½‘ä¸Šèµ„æ–™æ¯”è¾ƒå¤šï¼Œè¿™é‡Œä»¥ c/c++ ä¸ºä¾‹ã€‚ [å‚è€ƒé¡µé¢1](https://zhuanlan.zhihu.com/p/303223404)ã€€[å‚è€ƒé¡µé¢2](https://www.jianshu.com/p/49e3ef6f25bc)
 
-C/C++ ¶ÔÓ¦µÄÀ©Õ¹Îª coc-clangd£¬°²×°Ê¹ÓÃ :CocInstall coc-clangd ¼´¿É.  LSP Îª clangd£¬°²×°·½Ê½ÈçÏÂ£º
+C/C++ å¯¹åº”çš„æ‰©å±•ä¸º coc-clangdï¼Œå®‰è£…ä½¿ç”¨ :CocInstall coc-clangd å³å¯.  LSP ä¸º clangdï¼Œå®‰è£…æ–¹å¼å¦‚ä¸‹ï¼š
 
 ```
-# ´ÓgithubÏÂÔØClangd
+# ä»githubä¸‹è½½Clangd
 wget https://github.com/clangd/clangd/releases/download/11.0.0/clangd-linux-11.0.0.zip
 
-# ½âÑ¹ÎÄ¼ş
+# è§£å‹æ–‡ä»¶
 unzip clangd-linux-11.0.0.zip
 mv clangd_11.0.0/ /usr/share/
 
-# ´´½¨ÈíÁ¬½Ó²¢Æô¶¯
+# åˆ›å»ºè½¯è¿æ¥å¹¶å¯åŠ¨
 ln -s /usr/share/clangd_11.0.0/bin/clangd /usr/bin/clangd
 clangd
 ```
